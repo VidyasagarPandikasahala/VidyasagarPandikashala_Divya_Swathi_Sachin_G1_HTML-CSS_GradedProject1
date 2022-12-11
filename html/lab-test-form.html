@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pharmacy-Lab-Test</title>
+    <link
+      rel="icon"
+      href="/images/great-learning-icon-filled.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/lab-test-form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!----------------- main section---------------------->
+    <div class="body-container">
+      <div class="form-image-conainer">
+        <!----------------- form section---------------------->
+        <form id="form-lab" action="/html/pharmacy.html">
+        <div class="form-container">
+         
+            <div class="contact-details">
+              <div class="heading fs-secondary-heading">
+                <h2 class="fs-primary-heading .fw-bold">
+                  1.Your Contact Details
+                </h2>
+              </div>
+              <div class="input-area">
+                <input
+                  type="text"
+                  name="fullname"
+                  id="fullname"
+                  placeholder="Full name"
+                  required
+                />
+                <input
+                  type="number"
+                  name="patientId"
+                  id="patientId"
+                  placeholder="Patient Id if exists"
+                />
+                <input
+                  class="input-bottom-border"
+                  type="number"
+                  placeholder="Contact Number"
+                  min="0000000000"
+                  max="9999999999"
+                  required
+                />
+                <input
+                  type="mail"
+                  name="email"
+                  id="email"
+                  placeholder="E-mail Id"
+                  required
+                />
+              </div>
+            </div>
+            <div class="address-details">
+              <div class="heading">
+                <h2 class="fs-primary-heading .fw-bold">2. Address</h2>
+              </div>
+              <div class="input-area">
+                <input
+                  type="number"
+                  name="hno"
+                  id="hno"
+                  placeholder="H-No"
+                  required
+                />
+                <input
+                  type="text"
+                  name="street"
+                  id="street"
+                  placeholder="Street"
+                  required
+                />
+                <input
+                  type="text"
+                  name="area"
+                  id="area"
+                  placeholder="Area"
+                  required
+                />
+                <input
+                  type="none"
+                  name="contacts"
+                  id=" contacts"
+                  placeholder=" "
+                  
+                />
+              </div>
+            </div>
+            <div class="district-details">
+              <div class="heading">
+                <h2 class="fs-primary-heading .fw-bold">3. District</h2>
+              </div>
+              <div class="district-drop-down-list">
+                <select name="ditrict" id="district">
+                  <option value="Choose">--- choose ---</option>
+                  <option value="Kerala">Kerala</option>
+                  <option value="Tamilnadu">Tamilnadu</option>
+                  <option value="Karnataka">Karnataka</option>
+                  <option value="Andhra Pradesh">Andhra Pradesh</option>
+                  <option value="Maharashtra">Maharashtra</option>
+                </select>
+              </div>
+            </div>
+            <div class="test-type">
+              <div class="heading fs-secondary-heading">
+                <h2 class="fs-primary-heading .fw-bold">
+                  4. Choose the Test type
+                </h2>
+              </div>
+              <div class="test-type-checkbox">
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    name="test-type"
+                    id="test-type"
+                    value="CBC"
+                  />
+                  <label for="test-type">CBC</label>
+                </div>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    name="test-type"
+                    id="test-type"
+                    value="complete urine"
+                  />
+                  <label for="test-type">Complete Urine</label>
+                </div>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    name="test-type"
+                    id="test-type"
+                    value="Lipid Profile"
+                  />
+                  <label for="test-type">Lipid Profile</label>
+                </div>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    name="test-type"
+                    id="test-type"
+                    value="Thyroid Stimulating Hormone"
+                  />
+                  <label for="test-type"
+                    >Thyroid Stimulating Hormone(TSH)</label
+                  >
+                </div>
+                <div class="checkbox">
+                  <input
+                    type="checkbox"
+                    name="test-type"
+                    id="test-type"
+                    value="Glucose Test"
+                  />
+                  <label for="test-type">GlucoseTest</label>
+                </div>
+              </div>
+            </div>
+            <div class="hard-copy">
+              <div class="heading">
+                <h2 class="fs-primary-heading .fw-bold">
+                  5. Hard copy Required?
+                </h2>
+              </div>
+              <div class="radio-button-hard-copy">
+                <div class="radiobutton">
+                  <input
+                    type="radio"
+                    name="hardcopy"
+                    id="hardcopy"
+                    value="yes"
+                  />
+                  <label for="hardcopy">Yes</label>
+                </div>
+                <div class="radiobutton">
+                  <input
+                    type="radio"
+                    name="hardcopy"
+                    id="hardcopy"
+                    value="no"
+                  />
+                  <label for="hardcopy">No</label>
+                </div>
+              </div>
+            </div>
+            <div class="preferred-time">
+              <div class="heading">
+                <h2 class="fs-primary-heading .fw-bold">
+                  6. Please select preferred time and date
+                </h2>
+              </div>
+              <div class="preferred-time-input">
+                <input type="datetime-local" required />
+              </div>
+            </div>            
+          </form>                    
+        </div>
+        <!----------------- Image  section---------------------->
+
+        <div class="image-container">
+          <img src="/images/lab-test.jpg" alt="lab-test" />
+        </div>
+      </div>
+      <!----------------- Button section---------------------->
+      <div  class="buttons">
+        <div class="submit-button">
+          <button form="form-lab" class="fw-bold">Submit</button>
+        </div>
+        <div class="reset-button">
+          <button class="fw-bold">
+            <a class="fw-bold text-white" href=""> Reset</a>
+          </button>
+        </div>
+    </div>
+  </body>
+</html>

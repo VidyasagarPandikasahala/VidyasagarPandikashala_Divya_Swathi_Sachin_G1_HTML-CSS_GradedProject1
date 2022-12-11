@@ -1,0 +1,374 @@
+/* Root */
+:root {
+  --clr-primary-black: hsl(0, 0%, 0%);
+  --clr-primary-gray30: hsl(0, 0%, 50%);
+  --clr-primary-gray31: hsl(0, 0%, 31%);
+  --clr-primary-white96: hsl(0, 0%, 96%);
+  --clr-primary-steelblue: hsl(207, 44%, 49%);
+
+  --clr-bg-purple: hsl(271, 85%, 68%);
+  --clr-bg-bluish-gray: hsl(240, 67%, 94%);
+  --clr-bg-bluish-gray50: hsl(240, 71%, 97%);
+
+  --clr-text-blue: hsl(213, 78%, 55%);
+  --clr-text-yellow: hsl(31, 100%, 65%);
+  --clr-text-white: hsl(0, 0%, 100%);
+  --clr-text-black: var(--clr-primary-black);
+  --clr-text-black60: hsl(0, 0%, 60%);
+
+  --clr-border-blue: hsl(240, 98%, 65%);
+
+  --ff-primary: "Poppins", sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-300: 0.75rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.75rem;
+  --fs-800: 2rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-800);
+  --fs-secondary-heading: var(--fs-600);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-400);
+  --fs-nav-sublist: var(--fs-400);
+  --fs-nav-dropown: var(--fs-300);
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: var(--ff-body);
+  height: 100%;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* --Ultitly Classes-- */
+.text-blue {
+  color: var(--clr-text-blue);
+}
+.text-yellow {
+  color: var(--clr-text-yellow);
+}
+.text-white {
+  color: var(--clr-text-white);
+}
+.text-black {
+  color: var(--clr-text-black);
+}
+.text-black60 {
+  color: var(--clr-text-black60);
+}
+
+.bg-black {
+  background-color: var(--clr-primary-black);
+}
+.bg-gray30 {
+  background-color: var(--clr-primary-gray30);
+}
+.bg-gray31 {
+  background-color: var(--clr-primary-gray31);
+}
+.bg-bluish-gray {
+  background-color: var(--clr-bg-bluish-gray);
+}
+.bg-bluish-gray50 {
+  background-color: var(--clr-bg-bluish-gray50);
+}
+.bg-purple {
+  background-color: var(--clr-bg-purple);
+}
+.bg-white96 {
+  color: var(--clr-primary-white96);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+
+.fs-nav {
+  font-size: var(--fs-nav);
+}
+.fs-button {
+  font-size: var(--fs-button);
+  border: none;
+}
+.fs-nav-sublist {
+  font-size: var(--fs-nav-sublist);
+}
+.fs-dropdown {
+  font-size: var(--fs-nav-dropown);
+}
+
+/*------------------ html--class------------------*/
+/* -----Header and Nav Bar css------ */
+.header-nav-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.header {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.sub-navigation-container {
+  position: relative;
+}
+.ul-main {
+  display: flex;
+}
+.ul-main > li {
+  position: relative;
+  padding: 1.25rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.ul-main > li:hover {
+  background-color: var(--clr-primary-black);
+}
+
+.sub-navigation-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0%;
+}
+.sub-navigation-container .ul-sub {
+  background-color: var(--clr-primary-white96);
+  padding: 0;
+  margin: 0;
+}
+.sub-navigation-container .ul-sub > li {
+  padding: 0.5em;
+  padding-left: 1em;
+  cursor: pointer;
+}
+.sub-navigation-container .ul-sub > li > a {
+  white-space: nowrap;
+}
+
+.ul-main > li:hover .sub-navigation-container {
+  display: grid;
+}
+
+.covidcare-diabeticcare-section {
+  display: grid;
+  grid-template-rows: 0.25fr 1fr 0.25fr 0.25fr 1fr;
+  margin: 0;
+  padding: 2.5%;
+  width: 100%;
+}
+
+/* ------image animation style------ */
+.carousal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  height: 60%;
+  margin-top: 7%;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  animation-name: image-carousal;
+  animation-duration: 20s;
+  border: 0.5em solid var(--clr-primary-steelblue);
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+@keyframes image-carousal {
+  0% {
+    background-image: url(/images/ani1.jpg);
+    image-resolution: 300dpi;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background-image: url(/images/ani2.png);
+    image-resolution: 300dpi;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background-image: url(/images/ani3.jpg);
+    image-resolution: 300dpi;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background-image: url(/images/ani4.jpg);
+    image-resolution: 300dpi;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url(/images/ani5.jpg);
+    image-resolution: 300dpi;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+/* ------covid care -section- css style------ */
+
+.covidcare {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1em 1em 1em 1em;
+  gap: 1em;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+}
+.covidcare-components {
+  display: grid;
+  border-radius: 0.8rem;
+  padding: 1.25em 1.25em 1.25em 1.25em;
+  background-color: var(--clr-bg-bluish-gray50);
+  box-shadow: 0.15rem 0.15rem 0.25rem 0.2rem var(--clr-text-black60),
+    0.2rem 0.2rem 0.35rem 0.25rem var(--clr-bg-bluish-gray50);
+}
+.covidcare-components img {
+  width: 100%;
+  height: 225px;
+}
+.cart-button {
+  padding: 0.25em 0em;
+  border: 0.125em solid var(--clr-border-blue);
+  border-radius: 0.5rem;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.diabeticcare {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1em 1em 1em 1em;
+  gap: 1em;
+  background-color: white;
+  align-items: center;
+  justify-content: space-around;
+}
+.diabeticcare-components {
+  display: grid;
+  border-radius: 0.8rem;
+  padding: 1.25em 1.25em 1.25em 1.25em;
+  background-color: var(--clr-bg-bluish-gray50);
+  box-shadow: 0.15rem 0.15rem 0.25rem 0.2rem var(--clr-text-black60),
+    0.2rem 0.2rem 0.35rem 0.25rem var(--clr-bg-bluish-gray50);
+}
+
+.diabeticcare-components img {
+  width: 95%;
+  height: 225px;
+}
+
+.diabeticcare-components .cart-button {
+  padding: 0.25em 0em;
+  border-color: var(--clr-border-blue);
+  border-radius: 0.5rem;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.cart-button:active {
+  background-color: rgb(250, 234, 230);
+  border-color: rgb(0, 255, 76);
+  cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.05, 1.05);
+}
+.covidcare-components:hover {
+  transform: scale(1.05, 1.05);
+}
+.diabeticcare-components:hover {
+  transform: scale(1.05, 1.05);
+}
+/* -----------Form------------ */
+
+/* ------footer section------- */
+.footer {
+  text-align: center;
+  padding: 1.5%;
+}
